@@ -103,6 +103,14 @@ Results are written to `results/` as JSON and rendered as Markdown tables. See [
 - **Pricing**: [cachee.ai/pricing](https://cachee.ai/pricing)
 - **Blog**: [cachee.ai/blog](https://cachee.ai/blog)
 
+## Used in Production
+
+| Product | Use Case | Result |
+|---------|----------|--------|
+| [RevMine.ai](https://revmine.ai) | Token mining hot path — trust scores, leaderboards, swap quotes | <1µs cache hit, 1M entries, CacheeLFU eviction |
+| [V100.ai](https://v100.ai) | Video transcoding pipeline cache | Sub-microsecond frame metadata lookups |
+| [Auth1.ai](https://auth1.ai) | Session and rate limit cache | In-process, zero Redis in auth path |
+
 ## License
 
 Apache 2.0
